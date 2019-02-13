@@ -1,9 +1,9 @@
-<div class="card border-primary mb-3" style="max-width: 18rem;">
+<div class="card border-primary mb-3">
     <div class="card-header">Clientes</div>
     <div class="card-body text-primary">
         <h5 class="card-title">Listado de clientes</h5>
 
-        <table>
+        <table class="table table-bordered table-striped" style="color: black">
             <thead>
                 <tr>
                     <th>id</th>
@@ -13,9 +13,13 @@
                     <th>Fecha</th>
                 </tr>
             </thead>
-            <tbody *ngFor="let cliente of Cliente">
+            <tbody *ngFor="let cliente of clientes">
                 <tr>
-                    <td></td>
+                    <td>{{ cliente.id }}</td>
+                    <td>{{ cliente.nombre }}</td>
+                    <td>{{ cliente.apellido }}</td>
+                    <td>{{ cliente.fechaCreacion }}</td>
+                    <td>{{ cliente.email }}</td>
                 </tr>
             </tbody>
         </table>
